@@ -3,7 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>金源松车讯 - 专业二手车信息咨询服务</title>
+    <title>金源松车讯 - 专业车抵贷知识科普与咨询服务</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="金源松车讯提供专业车抵贷知识科普与咨询服务，帮助车主了解正规车抵贷与民间借贷的区别，提供合规透明的资金周转解决方案。不押车、费用透明、当天放款。">
+    <meta name="keywords" content="车抵贷,不押车贷款,汽车抵押贷款,二手车贷款,资金周转,车贷咨询,正规车抵贷,民间借贷区别,车辆抵押,贷款知识科普">
+    <meta name="author" content="金源松车讯">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="金源松车讯 - 专业车抵贷知识科普与咨询服务">
+    <meta property="og:description" content="专业 · 诚信 · 靠谱。帮助车主了解正规车抵贷知识，提供合规透明的资金周转解决方案。不押车、费用透明、当天放款。">
+    <meta property="og:url" content="https://www.jinyuansong.com/">
+    <meta property="og:site_name" content="金源松车讯">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="images/business-card.png">
+    <meta property="og:image:alt" content="金源松车讯名片">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "金源松车讯",
+        "description": "专业二手车信息咨询服务，提供车抵贷知识科普与合规资金周转解决方案。",
+        "url": "https://www.jinyuansong.com/",
+        "logo": "images/business-card.png",
+        "slogan": "专业 · 诚信 · 靠谱",
+        "serviceType": "二手车信息咨询、车抵贷知识科普",
+        "areaServed": {
+            "@type": "Country",
+            "name": "中国"
+        },
+        "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "车抵贷不押车和民间借贷押车有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "正规车抵贷不押车，车辆可正常使用，对接持牌金融机构，流程规范透明；民间借贷押车需将车辆交给对方保管，费用较高且风险较大。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "车抵贷需要什么条件？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "一般需要本人名下车辆、车辆登记证书（绿本）、身份证、驾驶证等。具体条件以实际审批为准。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -13,12 +73,13 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🚗</span>
+                <span class="logo-icon">&#x1F697;</span>
                 <span class="logo-text">金源松车讯</span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">首页</a></li>
                 <li><a href="article.html">知识科普</a></li>
+                <li><a href="faq.html">常见问题</a></li>
                 <li><a href="#contact">联系我们</a></li>
             </ul>
         </div>
@@ -29,12 +90,17 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>专业二手车信息咨询服务</h1>
+                    <h1>专业车抵贷咨询<br>不押车 · 当天放款</h1>
                     <p class="hero-subtitle">专业 · 诚信 · 靠谱</p>
-                    <p class="hero-desc">帮助车主了解正规车抵贷与民间借贷的区别，<br>提供专业的资金周转解决方案</p>
+                    <p class="hero-desc">正规渠道，车辆照常开，费用透明无套路</p>
                     <div class="hero-buttons">
-                        <a href="article.html" class="btn btn-primary">了解车抵贷知识</a>
-                        <a href="#contact" class="btn btn-secondary">立即咨询</a>
+                        <a href="#contact" class="btn btn-primary btn-hero-action">
+                            <span class="btn-icon">&#9201;</span> 3分钟预审
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-hero-action">
+                            <span class="btn-icon">&#128176;</span> 测算额度
+                        </a>
+                        <a href="article.html" class="btn btn-outline-white">了解详情</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -50,24 +116,136 @@
             <h2 class="section-title">为什么选择我们？</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">✅</div>
+                    <div class="feature-icon">&#9989;</div>
                     <h3>正规渠道</h3>
                     <p>对接持牌金融机构，流程规范透明，合法合规</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚙</div>
+                    <div class="feature-icon">&#128663;</div>
                     <h3>不押车</h3>
                     <p>车辆可正常使用，不影响日常工作和生活出行</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon">&#128176;</div>
                     <h3>费用透明</h3>
                     <p>合同条款清晰，综合成本明确，无隐形费用</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon">&#128274;</div>
                     <h3>安全可靠</h3>
                     <p>正规合同保障，权益有保障，风险可控</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">成功案例</h2>
+            <p class="section-subtitle">真实放款案例，仅供参考（具体以实际审批为准）</p>
+            <div class="cases-scroll-wrapper">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <div class="case-badge case-badge-full">全款车</div>
+                        <div class="case-car-icon">&#128663;</div>
+                        <h3 class="case-car-name">大众帕萨特</h3>
+                        <p class="case-car-year">2022款</p>
+                        <div class="case-amount">
+                            <span class="case-amount-label">放款金额</span>
+                            <span class="case-amount-value">8<span class="case-unit">万</span></span>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">放款时效</span>
+                                <span class="case-detail-value case-fast">当天到账</span>
+                            </div>
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">车辆状态</span>
+                                <span class="case-detail-value">全款车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-badge case-badge-loan">按揭中</div>
+                        <div class="case-car-icon">&#128663;</div>
+                        <h3 class="case-car-name">丰田凯美瑞</h3>
+                        <p class="case-car-year">2021款</p>
+                        <div class="case-amount">
+                            <span class="case-amount-label">放款金额</span>
+                            <span class="case-amount-value">6<span class="case-unit">万</span></span>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">放款时效</span>
+                                <span class="case-detail-value case-normal">次日到账</span>
+                            </div>
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">车辆状态</span>
+                                <span class="case-detail-value">按揭中</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-badge case-badge-full">全款车</div>
+                        <div class="case-car-icon">&#128663;</div>
+                        <h3 class="case-car-name">本田雅阁</h3>
+                        <p class="case-car-year">2023款</p>
+                        <div class="case-amount">
+                            <span class="case-amount-label">放款金额</span>
+                            <span class="case-amount-value">10<span class="case-unit">万</span></span>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">放款时效</span>
+                                <span class="case-detail-value case-fast">当天到账</span>
+                            </div>
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">车辆状态</span>
+                                <span class="case-detail-value">全款车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-badge case-badge-credit">征信一般</div>
+                        <div class="case-car-icon">&#128663;</div>
+                        <h3 class="case-car-name">宝马3系</h3>
+                        <p class="case-car-year">2020款</p>
+                        <div class="case-amount">
+                            <span class="case-amount-label">放款金额</span>
+                            <span class="case-amount-value">12<span class="case-unit">万</span></span>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">放款时效</span>
+                                <span class="case-detail-value case-normal">T+1到账</span>
+                            </div>
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">车辆状态</span>
+                                <span class="case-detail-value">征信一般</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-badge case-badge-full">全款车</div>
+                        <div class="case-car-icon">&#128663;</div>
+                        <h3 class="case-car-name">奔驰C级</h3>
+                        <p class="case-car-year">2022款</p>
+                        <div class="case-amount">
+                            <span class="case-amount-label">放款金额</span>
+                            <span class="case-amount-value">15<span class="case-unit">万</span></span>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">放款时效</span>
+                                <span class="case-detail-value case-fast">当天到账</span>
+                            </div>
+                            <div class="case-detail-item">
+                                <span class="case-detail-label">车辆状态</span>
+                                <span class="case-detail-value">全款车</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,7 +254,7 @@
     <!-- 重要提醒 -->
     <section class="notice-section">
         <div class="container">
-            <h2 class="section-title">📢 重要提醒</h2>
+            <h2 class="section-title">&#128226; 重要提醒</h2>
             <div class="notice-card">
                 <img src="images/notice.png" alt="温馨提醒 - 规范还款保障权益" class="notice-image">
                 <div class="notice-content">
@@ -95,7 +273,7 @@
     <!-- 知识科普 -->
     <section class="article-preview">
         <div class="container">
-            <h2 class="section-title">📚 车抵贷知识科普</h2>
+            <h2 class="section-title">&#128218; 车抵贷知识科普</h2>
             <div class="article-card">
                 <div class="article-content-wrapper">
                     <div class="article-text">
@@ -106,22 +284,22 @@
                         <h3>车抵贷不押车和民间借贷押车有什么区别？</h3>
                         <p>很多车主急用钱时，都会遇到两种常见选择：一种是正规车抵贷，车辆不押车，车还能继续开；另一种是民间借贷押车，把车放到对方指定地点...</p>
                         <div class="article-highlights">
-                            <span class="highlight-tag">✓ 合规对比</span>
-                            <span class="highlight-tag">✓ 成本分析</span>
-                            <span class="highlight-tag">✓ 风险提示</span>
+                            <span class="highlight-tag">&#10003; 合规对比</span>
+                            <span class="highlight-tag">&#10003; 成本分析</span>
+                            <span class="highlight-tag">&#10003; 风险提示</span>
                         </div>
-                        <a href="article.html" class="btn btn-primary">阅读全文 →</a>
+                        <a href="article.html" class="btn btn-primary">阅读全文 &#8594;</a>
                     </div>
                     <div class="article-image">
                         <div class="comparison-preview">
                             <div class="compare-item good">
-                                <span class="compare-icon">✓</span>
+                                <span class="compare-icon">&#10003;</span>
                                 <span>正规车抵贷</span>
                                 <small>不押车 · 合规</small>
                             </div>
                             <div class="vs-divider">VS</div>
                             <div class="compare-item bad">
-                                <span class="compare-icon">✗</span>
+                                <span class="compare-icon">&#10007;</span>
                                 <span>民间借贷</span>
                                 <small>押车 · 高风险</small>
                             </div>
@@ -129,13 +307,21 @@
                     </div>
                 </div>
             </div>
+            <!-- 文章区域下方CTA引导 -->
+            <div class="article-cta">
+                <div class="article-cta-content">
+                    <h3>想了解你的车能贷多少？</h3>
+                    <p>发送车型+年份+城市，免费获取专属方案</p>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-cta-action">立即咨询 &#8594;</a>
+            </div>
         </div>
     </section>
 
     <!-- 对比表格 -->
     <section class="comparison">
         <div class="container">
-            <h2 class="section-title">📊 两种方式对比</h2>
+            <h2 class="section-title">&#128202; 两种方式对比</h2>
             <div class="table-wrapper">
                 <table class="compare-table">
                     <thead>
@@ -148,8 +334,8 @@
                     <tbody>
                         <tr>
                             <td>车辆使用</td>
-                            <td class="highlight-green">✓ 车辆可正常使用</td>
-                            <td class="highlight-red">✗ 车辆需交给对方保管</td>
+                            <td class="highlight-green">&#10003; 车辆可正常使用</td>
+                            <td class="highlight-red">&#10007; 车辆需交给对方保管</td>
                         </tr>
                         <tr>
                             <td>办理机构</td>
@@ -168,13 +354,13 @@
                         </tr>
                         <tr>
                             <td>合规性</td>
-                            <td class="highlight-green">✓ 合规，受监管</td>
+                            <td class="highlight-green">&#10003; 合规，受监管</td>
                             <td>非标准金融产品</td>
                         </tr>
                         <tr>
                             <td>风险程度</td>
                             <td>风险可控</td>
-                            <td class="highlight-red">✗ 风险较高</td>
+                            <td class="highlight-red">&#10007; 风险较高</td>
                         </tr>
                         <tr>
                             <td>维权难度</td>
@@ -187,10 +373,48 @@
         </div>
     </section>
 
+    <!-- 我们的承诺 -->
+    <section class="promise" id="promise">
+        <div class="container">
+            <h2 class="section-title">&#128737; 我们的承诺</h2>
+            <p class="section-subtitle">诚信经营，透明服务，保障每一位客户的权益</p>
+            <div class="promise-grid">
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h3>不收前期费用</h3>
+                    <p>办理过程中不收取任何前期费用、手续费或评估费，放款前无需支付任何款项</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>不做高利贷</h3>
+                    <p>严格遵循国家法律法规，综合费率合法合规，绝不做高利贷和套路贷</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h3>不建议以贷养贷</h3>
+                    <p>理性借贷，根据实际还款能力规划，不鼓励以贷养贷、过度负债的行为</p>
+                </div>
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>实际以审批为准</h3>
+                    <p>所有额度和费率均以金融机构最终审批结果为准，前期不做虚假承诺</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 联系我们 -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">📞 联系我们</h2>
+            <h2 class="section-title">&#128222; 联系我们</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>扫码添加微信咨询</h3>
@@ -206,7 +430,7 @@
                         <code>车型 + 年份 + 所在城市 + 是否全款 + 大概需求金额 + 征信大概情况</code>
                     </div>
                     <div class="contact-tips">
-                        <h4>💡 温馨提示</h4>
+                        <h4>&#128161; 温馨提示</h4>
                         <ul>
                             <li>具体额度、费率以实际审批结果为准</li>
                             <li>贷款有风险，借款需理性</li>
@@ -223,11 +447,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-icon">🚗</span>
+                    <span class="logo-icon">&#x1F697;</span>
                     <span class="logo-text">金源松车讯</span>
                 </div>
                 <p class="footer-desc">专业二手车信息咨询服务</p>
                 <p class="footer-slogan">专业 · 诚信 · 靠谱</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="article.html">知识科普</a>
+                <a href="faq.html">常见问题</a>
+                <a href="#contact">联系我们</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 金源松车讯 - 专业二手车信息咨询服务</p>
@@ -235,5 +465,62 @@
             </div>
         </div>
     </footer>
+
+    <!-- 固定悬浮微信咨询按钮 -->
+    <div class="floating-wechat" id="floatingWechat">
+        <div class="floating-btn" id="floatingBtn" title="微信咨询">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm3.97 3.258c-3.797 0-6.878 2.694-6.878 6.017 0 3.322 3.081 6.018 6.878 6.018.722 0 1.417-.107 2.073-.296a.72.72 0 0 1 .583.08l1.513.886a.272.272 0 0 0 .134.043.236.236 0 0 0 .231-.234c0-.058-.023-.114-.038-.17l-.31-1.176a.474.474 0 0 1 .17-.531C21.895 18.555 23 16.807 23 14.766c0-3.323-3.082-6.017-6.432-6.517zm-2.349 3.39c.514 0 .931.423.931.944a.937.937 0 0 1-.931.943.937.937 0 0 1-.931-.943c0-.521.417-.944.931-.944zm4.698 0c.514 0 .931.423.931.944a.937.937 0 0 1-.931.943.937.937 0 0 1-.931-.943c0-.521.417-.944.931-.944z"/></svg>
+            <span>微信咨询</span>
+        </div>
+        <div class="qr-popup" id="qrPopup">
+            <div class="qr-popup-header">
+                <span>扫码添加微信</span>
+                <button class="qr-popup-close" id="qrPopupClose">&times;</button>
+            </div>
+            <div class="qr-popup-body">
+                <img src="images/qrcode.jpg" alt="微信二维码" class="qr-popup-img">
+                <p>微信扫一扫，获取专业咨询</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 悬浮按钮交互脚本 -->
+    <script>
+        (function() {
+            var floatingBtn = document.getElementById('floatingBtn');
+            var qrPopup = document.getElementById('qrPopup');
+            var qrPopupClose = document.getElementById('qrPopupClose');
+            var floatingWechat = document.getElementById('floatingWechat');
+
+            floatingBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                qrPopup.classList.toggle('active');
+            });
+
+            qrPopupClose.addEventListener('click', function(e) {
+                e.stopPropagation();
+                qrPopup.classList.remove('active');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!floatingWechat.contains(e.target)) {
+                    qrPopup.classList.remove('active');
+                }
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

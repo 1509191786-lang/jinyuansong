@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车抵贷知识库 - 不押车贷款科普 - 金源松车讯</title>
+    <meta name="description" content="车抵贷知识库汇集不押车贷款科普、城市指南、避坑指南等实用文章，帮助车主全面了解车抵贷，选择正规渠道，避免踩坑。">
+    <meta name="keywords" content="车抵贷知识库,不押车贷款科普,车抵贷指南,车抵贷避坑,车抵贷利率,广安车抵贷,成都车抵贷,重庆车抵贷">
+    <meta property="og:title" content="车抵贷知识库 - 不押车贷款科普 - 金源松车讯">
+    <meta property="og:description" content="车抵贷知识库汇集不押车贷款科普、城市指南、避坑指南等实用文章，帮助车主全面了解车抵贷，选择正规渠道，避免踩坑。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="金源松车讯">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 文章分类标签 */
+        .filter-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            padding: 10px 24px;
+            border-radius: 25px;
+            border: 2px solid var(--border-color);
+            background: white;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* 文章列表区域 */
+        .articles-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .article-list-card {
+            background: white;
+            border-radius: 14px;
+            padding: 35px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-list-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .article-list-card .card-category {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .card-category.cat-science {
+            background: #ebf8ff;
+            color: #2b6cb0;
+        }
+
+        .card-category.cat-city {
+            background: #f0fff4;
+            color: #276749;
+        }
+
+        .card-category.cat-warning {
+            background: #fffaf0;
+            color: #c05621;
+        }
+
+        .article-list-card h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .article-list-card .card-summary {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .article-list-card .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .card-date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .card-link {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* 底部CTA */
+        .articles-cta {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .articles-cta h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .articles-cta p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .articles-cta .cta-contact-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .articles-cta .cta-qrcode-box {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        .articles-cta .cta-qrcode-box img {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+        }
+
+        .articles-cta .cta-qrcode-box p {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .articles-cta .cta-info {
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .articles-cta .cta-info h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .articles-cta .cta-info p {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .articles-cta .cta-info .info-template {
+            background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+            padding: 18px 22px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .articles-cta .cta-info .info-template code {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .articles-cta .cta-contact-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .articles-cta .cta-info {
+                text-align: center;
+            }
+
+            .articles-cta .cta-info p {
+                text-align: center;
+            }
+
+            .filter-tags {
+                gap: 8px;
+            }
+
+            .filter-tag {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚗</span>
+                <span class="logo-text">金源松车讯</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="article.html" class="active">知识科普</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="article-header">
+        <div class="container">
+            <h1>车抵贷知识库</h1>
+            <p>科普知识 / 城市指南 / 避坑指南，一站式了解车抵贷</p>
+        </div>
+    </header>
+
+    <!-- 文章列表 -->
+    <section class="articles-section">
+        <div class="container">
+            <!-- 分类标签 -->
+            <div class="filter-tags">
+                <span class="filter-tag active">全部</span>
+                <span class="filter-tag">科普知识</span>
+                <span class="filter-tag">城市指南</span>
+                <span class="filter-tag">避坑指南</span>
+            </div>
+
+            <!-- 文章卡片列表 -->
+            <div class="articles-grid">
+
+                <!-- 文章1 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-science">科普知识</span>
+                    <h3>广安车抵贷指南：不押车怎么贷？利率多少？</h3>
+                    <p class="card-summary">广安车主必看！详细介绍广安地区车抵贷的办理流程、所需条件、不押车方案以及2024年最新利率参考，帮助您快速了解当地车抵贷市场。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年最新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章2 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-science">科普知识</span>
+                    <h3>全款车贷款 vs 按揭车贷款，哪个额度更高？</h3>
+                    <p class="card-summary">全款车和按揭车都能做车抵贷，但可贷额度差别很大。本文从评估方式、抵押方式、实际案例三个维度详细对比，帮您做出最优选择。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章3 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-warning">避坑指南</span>
+                    <h3>不押车贷款靠谱吗？3分钟看懂正规车抵贷</h3>
+                    <p class="card-summary">不押车贷款是否靠谱？如何区分正规车抵贷和非正规渠道？本文从资质验证、合同审查、费用透明度等方面教您快速判断。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章4 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-warning">避坑指南</span>
+                    <h3>征信花还能做车抵贷吗？真实案例告诉你</h3>
+                    <p class="card-summary">征信查询多、网贷记录多还能做车抵贷吗？通过3个真实案例分析，详解征信花车主的审批结果、费率差异和注意事项。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章5 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-science">科普知识</span>
+                    <h3>车抵贷利率一般是多少？2024年最新费率参考</h3>
+                    <p class="card-summary">车抵贷利率受哪些因素影响？银行、消费金融、助贷渠道的费率有什么区别？本文汇总2024年最新费率数据，附带计算示例。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年最新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章6 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-city">城市指南</span>
+                    <h3>成都车抵贷攻略：这些渠道正规又靠谱</h3>
+                    <p class="card-summary">成都车主办理车抵贷怎么选？本文梳理成都地区正规车抵贷渠道，对比不同机构的额度、费率和办理效率，附实用建议。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章7 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-city">城市指南</span>
+                    <h3>重庆车抵贷怎么选？不押车方案详解</h3>
+                    <p class="card-summary">重庆车抵贷市场有哪些选择？本文详解重庆地区不押车车抵贷的办理条件、流程和注意事项，帮助车主找到适合自己的方案。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 文章8 -->
+                <div class="article-list-card">
+                    <span class="card-category cat-warning">避坑指南</span>
+                    <h3>车抵贷被拒的5个常见原因及解决办法</h3>
+                    <p class="card-summary">车抵贷申请被拒怎么办？本文总结征信不良、车辆价值不足、资料不全等5大常见拒批原因，并给出针对性解决建议。</p>
+                    <div class="card-meta">
+                        <span class="card-date">2024年更新</span>
+                        <a href="article.html" class="card-link">阅读全文 &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部CTA -->
+    <section class="articles-cta">
+        <div class="container">
+            <h2>还有疑问？扫码咨询</h2>
+            <p>专业顾问为您一对一解答车抵贷相关问题</p>
+            <div class="cta-contact-wrapper">
+                <div class="cta-qrcode-box">
+                    <img src="images/qrcode.jpg" alt="微信二维码">
+                    <p>扫码添加微信咨询</p>
+                </div>
+                <div class="cta-info">
+                    <h3>咨询方式</h3>
+                    <p>如需了解适合您的车抵贷方案，可发送以下信息：</p>
+                    <div class="info-template">
+                        <code>车型 + 年份 + 所在城市 + 是否全款 + 大概需求金额 + 征信大概情况</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">📞 联系我们</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>扫码添加微信咨询</h3>
+                    <div class="qrcode-box">
+                        <img src="images/qrcode.jpg" alt="微信二维码" class="qrcode-img">
+                        <p class="qrcode-tip">扫码添加，获取专业咨询</p>
+                    </div>
+                </div>
+                <div class="contact-form-box">
+                    <h3>咨询方式</h3>
+                    <p>如需了解适合您的车抵贷方案，可发送以下信息：</p>
+                    <div class="info-template">
+                        <code>车型 + 年份 + 所在城市 + 是否全款 + 大概需求金额 + 征信大概情况</code>
+                    </div>
+                    <div class="contact-tips">
+                        <h4>温馨提示</h4>
+                        <ul>
+                            <li>具体额度、费率以实际审批结果为准</li>
+                            <li>贷款有风险，借款需理性</li>
+                            <li>请通过正规渠道办理，保护自身权益</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🚗</span>
+                    <span class="logo-text">金源松车讯</span>
+                </div>
+                <p class="footer-desc">专业二手车信息咨询服务</p>
+                <p class="footer-slogan">专业 · 诚信 · 靠谱</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 金源松车讯 - 专业二手车信息咨询服务</p>
+                <p class="footer-note">本站内容仅供参考，不构成任何投资或借贷建议</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

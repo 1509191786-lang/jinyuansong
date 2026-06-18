@@ -109,10 +109,8 @@
       text-align: center;
       padding: 120px 24px 80px;
       background: 
-        radial-gradient(ellipse at 20% 50%, rgba(62,106,225,0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(18,187,119,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 80%, rgba(245,184,0,0.05) 0%, transparent 50%),
-        linear-gradient(135deg, #fafbfc 0%, #f0f2f5 50%, #f8f9fa 100%);
+        linear-gradient(135deg, rgba(23,26,32,0.85) 0%, rgba(23,26,32,0.7) 40%, rgba(23,26,32,0.5) 100%),
+        url('images/hero_bg.jpg') center/cover no-repeat;
       position: relative;
       overflow: hidden;
     }
@@ -138,14 +136,15 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(62,106,225,0.1);
-      color: var(--accent);
+      background: rgba(62,106,225,0.2);
+      color: #7ba4ff;
       padding: 8px 20px;
       border-radius: 100px;
       font-size: 13px;
       font-weight: 600;
       margin-bottom: 32px;
-      border: 1px solid rgba(62,106,225,0.15);
+      border: 1px solid rgba(62,106,225,0.3);
+      backdrop-filter: blur(10px);
     }
     .hero h1 {
       font-size: clamp(36px, 6vw, 64px);
@@ -153,11 +152,12 @@
       line-height: 1.1;
       letter-spacing: -1px;
       margin-bottom: 24px;
+      color: #ffffff;
     }
-    .hero h1 .highlight { color: var(--accent); }
+    .hero h1 .highlight { color: #7ba4ff; }
     .hero-desc {
       font-size: 18px;
-      color: var(--text-secondary);
+      color: rgba(255,255,255,0.75);
       margin-bottom: 40px;
       line-height: 1.7;
       max-width: 560px;
@@ -218,13 +218,13 @@
     .stat-number {
       font-size: 36px;
       font-weight: 700;
-      color: var(--accent);
+      color: #7ba4ff;
       line-height: 1;
       margin-bottom: 8px;
     }
     .stat-label {
       font-size: 14px;
-      color: var(--text-secondary);
+      color: rgba(255,255,255,0.6);
     }
 
     /* ===== Calculator Section ===== */
@@ -654,6 +654,87 @@
       color: var(--text-secondary);
     }
 
+    /* ===== Cases Section ===== */
+    .cases-section {
+      padding: 100px 24px;
+      background: var(--bg-secondary);
+      position: relative;
+    }
+    .cases-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .cases-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .case-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--border-light);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+    }
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--success));
+    }
+    .case-amount {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .case-vehicle {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    .case-detail {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .case-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 4px 12px;
+      background: rgba(18,187,119,0.1);
+      color: var(--success);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .case-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+    }
+
     /* ===== QR Section ===== */
     .qr-section {
       padding: 100px 24px;
@@ -775,6 +856,7 @@
     <nav class="header-nav">
       <a href="#calculator">贷款试算</a>
       <a href="#features">服务优势</a>
+      <a href="#cases">服务案例</a>
       <a href="#comparison">正规对比</a>
       <a href="#contact">立即咨询</a>
     </nav>
@@ -1028,6 +1110,64 @@
     </div>
   </section>
 
+  <!-- Cases Section -->
+  <section class="cases-section" id="cases">
+    <div class="section-header">
+      <h2>服务案例</h2>
+      <p>近一年部分成功放款案例，持续更新中</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-amount">¥120,000</div>
+        <div class="case-vehicle">丰田凯美瑞 2023款</div>
+        <div class="case-detail">征信有逾期记录，银行拒批。通过车抵贷当天放款12万，36期，月供¥3,880</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥150,000</div>
+        <div class="case-vehicle">大众帕萨特 2022款</div>
+        <div class="case-detail">征信花了多处查询，急需资金周转。匹配最优方案，当天审批放款15万</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥200,000</div>
+        <div class="case-vehicle">宝马3系 2024款</div>
+        <div class="case-detail">网贷多导致征信差，无法从银行贷款。车抵贷放款20万，费率合理，不押车</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥80,000</div>
+        <div class="case-vehicle">本田雅阁 2021款</div>
+        <div class="case-detail">个体经营周转困难，征信有2次逾期。当天评估放款8万，24期还清</div>
+        <div class="case-status">已结清</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥250,000</div>
+        <div class="case-vehicle">奔驰C级 2023款</div>
+        <div class="case-detail">企业资金链紧张，征信查询过多。快速匹配方案放款25万，车辆正常使用</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥100,000</div>
+        <div class="case-vehicle">比亚迪汉 2024款</div>
+        <div class="case-detail">征信白户无记录，银行审批慢。车抵贷当天放款10万，解决紧急用款需求</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥180,000</div>
+        <div class="case-vehicle">奥迪A4L 2022款</div>
+        <div class="case-detail">信用卡逾期多次，银行拒贷。通过车抵贷成功融资18万，还款灵活</div>
+        <div class="case-status">已放款</div>
+      </div>
+      <div class="case-card">
+        <div class="case-amount">¥90,000</div>
+        <div class="case-vehicle">日产天籁 2023款</div>
+        <div class="case-detail">装修急需用钱，征信有小额逾期。当天评估放款9万，费率透明无隐藏费用</div>
+        <div class="case-status">已放款</div>
+      </div>
+    </div>
+  </section>
+
   <!-- QR Section -->
   <section class="qr-section" id="contact">
     <div class="section-header">
@@ -1050,6 +1190,7 @@
     <div class="footer-links">
       <a href="#calculator">贷款试算</a>
       <a href="#features">服务优势</a>
+      <a href="#cases">服务案例</a>
       <a href="#comparison">正规对比</a>
       <a href="#contact">立即咨询</a>
     </div>
